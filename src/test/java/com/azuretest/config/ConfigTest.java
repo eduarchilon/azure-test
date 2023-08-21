@@ -10,7 +10,7 @@ public class ConfigTest {
 
     @Test
     public void testVariablesDeEntorno() {
-        String env = "test-value";
+        String env = "test-value-home";
         Boolean isTEST = env.equals(System.getenv("TEST"));
         //System.out.println(System.getenv("TEST"));
         //System.out.println("El valor de la variable de TEST es: " + System.getenv("TEST"));
