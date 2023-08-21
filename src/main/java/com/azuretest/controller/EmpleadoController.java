@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Arrays;
 import java.util.List;
 
 @RestController
@@ -26,7 +27,12 @@ public class EmpleadoController {
     }
 
     @GetMapping()
-    public ResponseEntity<List<Empleado>> getAllEmpleados(){
+    public ResponseEntity<List<Empleado>> getAllEmpleados() {
+        //Mock datos empleados
+        Empleado e1 = new Empleado(1L, "Ana", 20);
+        Empleado e2 = new Empleado(2L, "Juan", 30);
+        Empleado e3 = new Empleado(3L, "Jose", 40);
+        this.empleadoRepository.saveAll(Arrays.asList(e1, e2, e3));
         List<Empleado> empleados = this.empleadoRepository.findAll();
         return new ResponseEntity<>(empleados, HttpStatus.OK);
     }
