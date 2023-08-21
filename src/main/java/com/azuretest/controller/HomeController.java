@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HomeController {
 
-    @Value("${mi.propiedad}")
+    @Value("${TEST}")
     private String miPropiedad;
 
     @GetMapping()
