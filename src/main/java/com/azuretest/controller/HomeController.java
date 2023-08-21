@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HomeController {
 
-    @Value("${TEST}")
-    private String miPropiedad;
+    /*@Value("${TEST}")
+    private String miPropiedad;*/
 
     @GetMapping()
     public ResponseEntity<?> holaMundo() {
@@ -20,7 +20,8 @@ public class HomeController {
 
     @GetMapping("/env")
     public ResponseEntity<?> getENV() {
-        String env = "ENV: " + System.getenv("TEST") + " o con mi.propiedad: " + this.miPropiedad;
+        //String env = "ENV: " + System.getenv("TEST") + " o con mi.propiedad: " + this.miPropiedad;
+        String env = "ENV: " + System.getenv("TEST");
         return new ResponseEntity<>(env, HttpStatus.OK);
     }
 }
