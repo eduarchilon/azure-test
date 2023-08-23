@@ -43,7 +43,7 @@ public class EmpleadoController {
         Optional<Empleado> empleado = this.empleadoRepository.findById(id);
         if (!this.empleadoRepository.existsById(id)) {
             return new ResponseEntity<>("No existe el objeto", HttpStatus.NOT_FOUND);
-        }else{
+        } else {
             return new ResponseEntity<>(empleado.get(), HttpStatus.OK);
         }
     }
@@ -58,10 +58,10 @@ public class EmpleadoController {
         Optional<Empleado> empleadoEncontrado = this.empleadoRepository.findById(id);
         if (!this.empleadoRepository.existsById(id)) {
             return new ResponseEntity<>("No existe el objeto", HttpStatus.NOT_FOUND);
-        }else{
+        } else {
             empleadoEncontrado.get().setNombre(empleado.getNombre());
             empleadoEncontrado.get().setEdad(empleado.getEdad());
-            return new ResponseEntity<>( this.empleadoRepository.save(empleadoEncontrado.get()), HttpStatus.OK);
+            return new ResponseEntity<>(this.empleadoRepository.save(empleadoEncontrado.get()), HttpStatus.OK);
         }
     }
 
