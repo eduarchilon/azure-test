@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: ${APPSETTING_URL}
+    #url: ${APPSETTING_URL}
     #username: azure
     #password: ${AZURE_DB_PASSWORD}
   jpa:
