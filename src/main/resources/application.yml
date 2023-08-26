@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:sqlserver://azure-database-test.database.windows.net:1433;database=azure-test;user=azure@azure-database-test;password=${SQLCONNSTR_PASSWORD};encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;
+    url: jdbc:sqlserver://azure-database-test.database.windows.net:1433;database=azure-test;user=azure@azure-database-test;password=${SQLAZURECONNSTR_PASSWORD};encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;
     #username: azure
     #password: ${AZURE_DB_PASSWORD}
   jpa:
